@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Same World,Same War</title>
+</head>
+<body>
+    <hi>War and peace</hi>
+    <div>
+        {% if categories %}
+        <ul>
+            {% for category in categories %}
+                <li>{{category.name}}</li>>
+            {% endfor %}
+        </ul>>
+        {% else %}
+            <strong>There are no categories present.</strong>>
+        {% endif %}
+    </div>
+
+    <div>
+        <a href="/rango/about/">About Rango</a><br/>
+        <img src="{% static 'images/ww2.jpg' %}"
+            alt="picture of world war"/>
+    </div>
+</body>
+</html>
